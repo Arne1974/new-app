@@ -37,6 +37,7 @@
   </app-provide-list>
 </div>
 
-<pre>
-  {{people.getPeople() | json}}
-</pre>
+<app-contact-list
+  *ngFor="let person of people.getPeople()"
+  [person]="person"
+></app-contact-list>
