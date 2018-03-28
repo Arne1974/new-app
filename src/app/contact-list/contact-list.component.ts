@@ -6,14 +6,15 @@ import { Component, OnInit, Inject, Input } from '@angular/core';
   styleUrls: ['./contact-list.component.css']
 })
 export class ContactListComponent implements OnInit {
-  @Input() person;
+  persons;
 
   constructor(
-    // @Inject('people') private people
+    @Inject('people') private people
   ) { }
 
   ngOnInit() {
-    // console.log(this.people.getPeople());
+    this.persons = this.people.getPeople();
+    console.log(this.persons);
   }
 
 }
