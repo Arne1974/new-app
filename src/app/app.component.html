@@ -26,9 +26,13 @@
 <hr>
 <div>
   <ul>
-    <li *ngFor="let message of liste.messages">{{message.text}}</li>
+    <li 
+    *ngFor="let message of liste.messages">{{message.text}}</li>
   </ul>
 
-  <app-provide-list *ngFor="let message of liste.messages" [message]="message.text" (update)="onUpdate(message.id, $event.text)">
+  <app-provide-list 
+    *ngFor="let message of liste.messages" 
+    [message]="message.text" 
+    (update)="onUpdate(message.id, $event.text)">
   </app-provide-list>
 </div>

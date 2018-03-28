@@ -1,0 +1,7 @@
+.mousedown {
+  border: 2px solid green;
+}
+input:focus {
+  font-weight: bold;
+  outline: none;
+}
