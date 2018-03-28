@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewEncapsulation, Inject } from '@angular/core';
 
 @Component({
   encapsulation: ViewEncapsulation.Emulated,  // default
@@ -14,9 +14,12 @@ export class ProvideListComponent implements OnInit {
 
   @Output() update = new EventEmitter();
 
-  constructor() { }
+  constructor(
+    @Inject('people') private people
+  ) {}
 
   ngOnInit() {
+    console.log(this.people.getPeople());
   }
 
 

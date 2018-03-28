@@ -13,6 +13,7 @@ export class AppComponent {
   }
 
   constructor(
-    @Inject('liste') private liste
+    @Inject('liste') private liste,
+    @Inject('people') private people
   ) {}
 }
