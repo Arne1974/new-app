@@ -4,10 +4,18 @@ import { Injectable } from '@angular/core';
 export class ListeService {
 
   messages = [
-    'You are here!',
-    'You are there!',
-    'You are where!'
+    {'id': 0, text: 'You are here!'},
+    {'id': 1, text: 'You are there!'},
+    {'id': 2, text: 'You are where!'}
   ];
+
+  update(id, text) {
+    this.messages = this.messages.map(m =>
+      m.id === id
+        ? {id, text}
+        : m
+    );
+  }
 
   constructor() { }
 

@@ -1,5 +1,4 @@
-<li>
-  {{message}}
-</li>
-<input #myInput type="text" [(ngModel)]="message">
-<button (click)="onClick($event, myInput.value)">Click me!</button>
+<div>
+  <input #myInput type="text" [(ngModel)]="message">
+  <button (click)="update.emit({text:message})">Click me!</button>
+</div>

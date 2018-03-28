@@ -8,6 +8,10 @@ import { Component, Inject } from '@angular/core';
 export class AppComponent {
   title = 'My First Angular App!';
 
+  onUpdate(id, text) {
+    this.liste.update(id, text);
+  }
+
   constructor(
     @Inject('liste') private liste
   ) {}

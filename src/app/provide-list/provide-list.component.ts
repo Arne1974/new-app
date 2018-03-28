@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-provide-list',
@@ -8,6 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ProvideListComponent implements OnInit {
   // tslint:disable-next-line:member-ordering
   @Input() message;
+
+  @Output() update = new EventEmitter();
 
   constructor() { }
 
