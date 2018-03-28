@@ -20,10 +20,6 @@ import { ListeService } from './liste.service';
   providers: [{
     provide: 'liste',
     useClass: ListeService
-  },
-  {
-    provide: 'api',
-    useValue: 'http://localhost:4200/'
   }],
   bootstrap: [AppComponent]
 })

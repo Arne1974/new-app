@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-provide-list',
@@ -12,8 +12,6 @@ export class ProvideListComponent implements OnInit {
   ngOnInit() {
   }
 
-  onClick(event, value) {
-    console.log(value);
-    console.log(event);
-  }
+  // tslint:disable-next-line:member-ordering
+  @Input() message;
 }

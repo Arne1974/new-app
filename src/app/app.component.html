@@ -19,8 +19,7 @@
 </ul>
 <hr>
 <div>
-  <app-provide-list></app-provide-list>
-  {{liste.msg}}
-  <hr>
-  {{api}}
+  <ul>
+    <app-provide-list *ngFor="let message of liste.messages" [message]="message"></app-provide-list>
+  </ul>
 </div>

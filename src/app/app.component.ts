@@ -9,7 +9,6 @@ export class AppComponent {
   title = 'My First Angular App!';
 
   constructor(
-    @Inject('liste') private liste,
-    @Inject('api') private api
+    @Inject('liste') private liste
   ) {}
 }
