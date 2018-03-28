@@ -17,7 +17,14 @@ import { ListeService } from './liste.service';
   imports: [
     BrowserModule
   ],
-  providers: [ListeService],
+  providers: [{
+    provide: 'liste',
+    useClass: ListeService
+  },
+  {
+    provide: 'api',
+    useValue: 'http://localhost:4200/'
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

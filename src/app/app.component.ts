@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { ListeService } from './liste.service';
+import { Component, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +8,8 @@ import { ListeService } from './liste.service';
 export class AppComponent {
   title = 'My First Angular App!';
 
-  constructor(private liste: ListeService) {}
+  constructor(
+    @Inject('liste') private liste,
+    @Inject('api') private api
+  ) {}
 }
