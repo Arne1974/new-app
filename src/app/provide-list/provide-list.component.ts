@@ -6,12 +6,13 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./provide-list.component.css']
 })
 export class ProvideListComponent implements OnInit {
+  // tslint:disable-next-line:member-ordering
+  @Input() message;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  // tslint:disable-next-line:member-ordering
-  @Input() message;
+
 }

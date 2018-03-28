@@ -20,6 +20,10 @@
 <hr>
 <div>
   <ul>
-    <app-provide-list *ngFor="let message of liste.messages" [message]="message"></app-provide-list>
+    <app-provide-list 
+      *ngFor="let message of liste.messages" 
+      [message]="message"
+      >
+    </app-provide-list>
   </ul>
 </div>

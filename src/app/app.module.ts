@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ProvideListComponent } from './provide-list/provide-list.component';
@@ -15,7 +15,8 @@ import { ListeService } from './liste.service';
     AppProvideListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [{
     provide: 'liste',
