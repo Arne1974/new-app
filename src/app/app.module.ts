@@ -9,6 +9,9 @@ import { ListeService } from './liste.service';
 import { PeopleService } from './people.service';
 import { ContactListComponent } from './contact-list/contact-list.component';
 
+/* Feature Modules */
+import { GameListModule } from './game-list/game-list.module';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +22,8 @@ import { ContactListComponent } from './contact-list/contact-list.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    GameListModule
   ],
   providers: [
     {
