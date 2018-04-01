@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter, ViewEncapsulation, Inject } from '@angular/core';
-import { PeopleService } from '../people.service';
+import { GameListModule } from '../game-list/game-list.module';
 
 @Component({
   encapsulation: ViewEncapsulation.Emulated,  // default
@@ -9,19 +9,19 @@ import { PeopleService } from '../people.service';
 })
 export class ProvideListComponent implements OnInit {
   isMousedown;
-  leute;
+  spiele;
 
   // tslint:disable-next-line:member-ordering
   @Input() message;
 
   @Output() update = new EventEmitter();
 
-  constructor(@Inject('people') private people) {
-    this.leute = people.getPeople();
+  constructor(@Inject('games') private games) {
+    this.spiele = games.getGames();
   }
 
   ngOnInit() {
-    console.log('provide-list-component: ', this.leute);
+    console.log('provide-list-component: ', this.spiele);
   }
 
 
